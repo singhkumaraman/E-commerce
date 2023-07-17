@@ -1,68 +1,33 @@
 import React, { useContext } from "react";
-import { AppContext } from "./context/productContext";
-
+import { FilterContext } from "./context/FilterContext";
+import ProductsList from "./components/ProductsList";
 const Products = () => {
-  const context = useContext(AppContext);
-  const items = context.products;
-
+  const context = useContext(FilterContext);
+  const { filterproducts, sorting, allProducts } = context;
   return (
-    <>
-      <div className="flex">
-        {/* Side Navigation Bar */}
-        <div className="w-1/4 bg-gray-200 h-screen"></div>
-
-        <div className="w-3/4 mx-auto grid max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
-          {items.map((v, i) => (
-            <div key={i} className="rounded-md border">
-              <img
-                src={v.image}
-                alt="Laptop"
-                className="aspect-[16/9] w-full rounded-md md:aspect-auto md:h-[300px] lg:h-[200px]"
-              />
-              <div className="p-4">
-                <h1 className="inline-flex items-center text-lg font-semibold">
-                  {v.name}
-                </h1>
-                <p className="mt-3 text-sm text-gray-600">
-                  {v.description.substring(0, 30) + "..."}
-                </p>
-                <div className="mt-4">
-                  <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-                    #Sneakers
-                  </span>
-                  <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-                    #Nike
-                  </span>
-                  <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-                    #Airmax
-                  </span>
-                </div>
-                <div className="mt-3 flex items-center space-x-2">
-                  <span className="block text-sm font-semibold">Colors : </span>
-                  <span
-                    className={`block h-4 w-4 rounded-full border-2 border-gray-300 bg-[${v.colors[0]}]`}
-                  ></span>
-                  <span className="block h-4 w-4 rounded-full border-2 border-gray-300 "></span>
-                  <span className="block h-4 w-4 rounded-full border-2 border-gray-300 "></span>
-                </div>
-                <div className="mt-5 flex items-center space-x-2">
-                  <span className="block text-sm font-semibold">Price : $</span>
-                  <span className="block cursor-pointer rounded-md border border-gray-300 p-1 px-2 text-xs font-medium">
-                    {v.price}
-                  </span>
-                </div>
-                <button
-                  type="button"
-                  className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                >
-                  Add to Cart
-                </button>
-              </div>
+    <div className="py-10 px-32 ">
+      <div className="grid grid-cols-5 gap-8">
+        <div className="col-span-1 border border-gray-300 rounded-sm h-1/2">
+          <div className="p-3">
+            <span className="font-semibold text-gray-400">Sort by:</span>
+            <div>
+              <form action="#">
+                <label htmlFor="sort"></label>
+                <select name="sort" id="sort" className="" onClick={sorting}>
+                  <option value="lowest">Price(lowest)</option>
+                  <option value="highest">Price(highest)</option>
+                  <option value="a-z">Price(a-z)</option>
+                  <option value="z-a">Price(z-a)</option>
+                </select>
+              </form>
             </div>
-          ))}
+          </div>
+        </div>
+        <div className="col-span-4">
+          <ProductsList items={filterproducts} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

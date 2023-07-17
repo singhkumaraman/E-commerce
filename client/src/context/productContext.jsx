@@ -5,6 +5,9 @@ const initialState = {
   products: [],
   isError: false,
   featuresProducts: [],
+  singleProduct: {},
+  isSingleLoading: false,
+  isSingleError: false,
 };
 export const AppContext = createContext();
 export function AppProvider({ children }) {
@@ -24,10 +27,32 @@ export function AppProvider({ children }) {
       dispatch({ type: "ERROR" });
     }
   };
+  const getSingleProduct = async (id) => {
+    dispatch({ type: "SINGLE_LOADING" });
+
+    const response = await fetch(
+      `https://api.pujakaitem.com/api/products/${id}`,
+      {
+        method: "GET",
+        headers: {
+          "Context-Type": "application/json",
+        },
+      }
+    );
+    if (response.status === 200) {
+      const data = await response.json();
+      // console.log(data);
+      dispatch({ type: "SINGLE_PRODUCT", payload: data });
+    } else {
+      dispatch({ type: "SINGLE_ERROR" });
+    }
+  };
   useEffect(() => {
     getProducts();
   }, []);
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, getSingleProduct }}>
+      {children}
+    </AppContext.Provider>
   );
 }

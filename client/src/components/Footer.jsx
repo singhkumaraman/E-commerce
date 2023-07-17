@@ -1,36 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaJediOrder } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900">
+    <footer className="p-4  sm:p-6 text-white bg-blue-900">
       <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com" className="flex items-center">
-              <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                className="mr-3 h-8"
-                alt="FlowBite Logo"
-              />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <a
+              href="https://github.com/singhkumaraman/E-commerce"
+              className="flex items-center"
+            >
+              <FaJediOrder className="mr-3 h-6 sm:h-9 text-3xl" />
+              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
                 Wooush Cart
               </span>
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
                 Resources
               </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
+              <ul className=" text-white-400">
                 <li className="mb-4">
-                  <Link to="https://flowbite.com" className="hover:underline">
+                  <Link
+                    to="https://www.instagram.com/"
+                    className="hover:underline"
+                  >
                     Instagram
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="https://tailwindcss.com/"
+                    to="https://www.facebook.com/"
                     className="hover:underline"
                   >
                     Facebook
@@ -39,10 +42,10 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
                 Follow us
               </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
+              <ul className="text-white">
                 <li className="mb-4">
                   <Link
                     to="https://github.com/singhkumaraman"
@@ -62,10 +65,10 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
                 Legal
               </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
+              <ul className="text-white">
                 <li className="mb-4">
                   <Link to="#" className="hover:underline">
                     Privacy Policy
@@ -80,20 +83,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6  sm:mx-auto border-offWhite lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © {new Date().getFullYear()}{" "}
-            <Link to="https://flowbite.com" className="hover:underline">
-              Flowbite™
-            </Link>
-            . All Rights Reserved.
+          <span className="text-sm  sm:text-center text-white">
+            © {new Date().getFullYear()} . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <Link
-              to="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
+            <Link to="#" className="text-white ">
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -107,10 +103,7 @@ const Footer = () => {
                 />
               </svg>
             </Link>
-            <Link
-              to="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
+            <Link to="#" className="text-white">
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -124,10 +117,7 @@ const Footer = () => {
                 />
               </svg>
             </Link>
-            <Link
-              to="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
+            <Link to="#" className="text-white ">
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -137,10 +127,7 @@ const Footer = () => {
                 <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
               </svg>
             </Link>
-            <Link
-              to="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
+            <Link to="#" className="text-white ">
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -154,10 +141,7 @@ const Footer = () => {
                 />
               </svg>
             </Link>
-            <Link
-              to="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-            >
+            <Link to="#" className="text-white ">
               <svg
                 className="w-5 h-5"
                 fill="currentColor"

@@ -1,13 +1,16 @@
 import React from "react";
 const Trusted = () => {
   return (
-    <section className="bg-white dark:bg-gray-800">
+    <section className="bg-gray-100 mb-20">
       <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
         <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">
           You’ll be in good company
         </h2>
         <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
-          <a href="#" className="flex justify-center items-center">
+          <a
+            href="https://www.airbnb.co.in/"
+            className="flex justify-center items-center"
+          >
             <svg
               className="h-9 hover:text-gray-900 dark:hover:text-white"
               viewBox="0 0 125 35"
@@ -22,7 +25,10 @@ const Trusted = () => {
               />
             </svg>
           </a>
-          <a href="#" className="flex justify-center items-center">
+          <a
+            href="https://www.google.com/"
+            className="flex justify-center items-center"
+          >
             <svg
               className="h-9 hover:text-gray-900 dark:hover:text-white"
               viewBox="0 0 86 29"
@@ -37,7 +43,10 @@ const Trusted = () => {
               />
             </svg>
           </a>
-          <a href="#" className="flex justify-center items-center">
+          <a
+            href="https://www.microsoft.com/en-in"
+            className="flex justify-center items-center"
+          >
             <svg
               className="h-8 hover:text-gray-900 dark:hover:text-white"
               viewBox="0 0 151 34"
@@ -63,7 +72,10 @@ const Trusted = () => {
             </svg>
           </a>
 
-          <a href="#" className="flex justify-center items-center">
+          <a
+            href="https://open.spotify.com/"
+            className="flex justify-center items-center"
+          >
             <svg
               className="h-9 hover:text-gray-900 dark:hover:text-white"
               viewBox="0 0 124 38"
@@ -76,7 +88,10 @@ const Trusted = () => {
               />
             </svg>
           </a>
-          <a href="#" className="flex justify-center items-center">
+          <a
+            href="https://mailchimp.com/guesswork-campaign/?ds_c=DEPT_AOC_Google_Search_ROA_EN_Brand_Acquire_Exact_MKAG_T4&gclid=Cj0KCQjwzdOlBhCNARIsAPMwjbzXINJq2tbrth9KhiVz_9nQqD4_AM-dvLkL750UZ8iqpdVyl0K68lUaAjLBEALw_wcB&gclsrc=aw.ds"
+            className="flex justify-center items-center"
+          >
             <svg
               class="h-9 hover:text-gray-900 dark:hover:text-white"
               viewBox="0 0 137 37"
@@ -157,7 +172,10 @@ const Trusted = () => {
               />
             </svg>
           </a>
-          <a href="#" class="flex justify-center items-center">
+          <a
+            href="https://in.mashable.com/"
+            class="flex justify-center items-center"
+          >
             <svg
               className="h-6 hover:text-gray-900 dark:hover:text-white"
               viewBox="0 0 124 21"

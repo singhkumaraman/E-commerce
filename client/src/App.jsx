@@ -12,17 +12,21 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/products" element={<Products />}></Route>
-        <Route path="/product/:id" element={<Product />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-        <Route path="*" element={<Error />}></Route>
-      </Routes>
-      <Footer />
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/products" element={<Products />}></Route>
+            <Route path="/product/:id" element={<Product />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+            <Route path="*" element={<Error />}></Route>
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 };
