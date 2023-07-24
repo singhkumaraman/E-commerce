@@ -8,7 +8,7 @@ const getCartData = () => {
   else return JSON.parse(localStorage.getItem("cart"));
 };
 const initialState = {
-  cart: JSON.parse(localStorage.getItem("cart")),
+  cart: getCartData(),
   total_item: "",
   total_price: "",
   shipping_charges: 100000,

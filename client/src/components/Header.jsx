@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaJediOrder } from "react-icons/fa";
+import { FaJediOrder, FaShoppingCart, FaUserAlt } from "react-icons/fa";
 const Header = () => {
   return (
     <header>
@@ -9,7 +9,7 @@ const Header = () => {
           <a href="#" className="flex items-center">
             <FaJediOrder className="mr-3 h-6 sm:h-9 text-3xl" />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Wooush Cart{" "}
+              Wooush Cart
             </span>
           </a>
           <div className="flex items-center lg:order-2">
@@ -17,13 +17,19 @@ const Header = () => {
               to="#"
               className="text-white focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800"
             >
-              Log in
+              <div className="flex items-center justify-center gap-1">
+                <FaUserAlt />
+                <p>Log in</p>
+              </div>
             </Link>
             <Link
               to="/cart"
-              className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-700"
+              className="text-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-700"
             >
-              Cart
+              <div className="flex items-center justify-center gap-1">
+                <FaShoppingCart />
+                <p>Cart</p>
+              </div>
             </Link>
             <button
               data-collapse-toggle="mobile-menu-2"
